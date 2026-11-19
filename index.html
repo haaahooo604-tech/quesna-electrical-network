@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>منصة المعهد الفني الصناعي بقويسنا - الفرقة الثانية شعبة شبكات كهربائية</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230f172a'/><path d='M56 12L24 56h24l-4 32 32-44H52z' fill='%23f59e0b'/></svg>" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-wrap">
+      <div class="brand">
+        <div class="bolt-badge" aria-hidden="true">⚡</div>
+        <div>
+          <h1>المعهد الفني الصناعي بقويسنا</h1>
+          <p>الفرقة الثانية - شعبة شبكات كهربائية | تصميم وإدارة: محمد سامح</p>
+        </div>
+      </div>
+      <nav>
+        <button class="nav-btn active" data-target="home">الرئيسية والجدول</button>
+        <button class="nav-btn" data-target="register">التسجيل والسيرة الذاتية</button>
+        <button class="nav-btn" data-target="subjects">المواد (7 مواد)</button>
+        <button class="nav-btn" data-target="students">قائمة الطلاب (286)</button>
+        <button class="nav-btn" data-target="support">الدعم الفني</button>
+        <button class="nav-btn" data-target="admin">لوحة الأدمن</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- الرئيسية وجدول المحاضرات -->
+    <section id="home" class="section active">
+      <div class="hero">
+        <span class="hero-tag">منصة الشبكات الكهربائية - قويسنا</span>
+        <h2>منصة الفرقة الثانية - شعبة شبكات كهربائية</h2>
+        <p>
+          البوابة التعليمية الموحدة لطلاب المعهد الفني الصناعي بقويسنا لمتابعة جدول المحاضرات الرسمي،
+          وتحميل ملفات المحاضرات والامتحانات بصيغة PDF للمواد السبع، والبحث في قائمة الطلاب،
+          والتواصل المباشر مع الدعم الفني.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>جدول المحاضرات الرسمي (تعديل 1 - 10 - 2026)</h3>
+        <div id="scheduleBox" class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>اليوم</th>
+                <th>المقررات والمحاضرات / السكاشن</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>السبت</td><td>أنظمة توليد القوى الكهربية، إلكترونيات قوى كهربية، تحكم آلي، معالجات ومتحكمات</td></tr>
+              <tr><td>الأحد</td><td>إلكترونيات قوى كهربية، أنظمة توليد القوى، ضبط جودة، معالجات ومتحكمات</td></tr>
+              <tr><td>الإثنين</td><td>تحكم آلي، شبكات قوى كهربية، تكنولوجيا وورش شبكات وأجهزة كهربائية</td></tr>
+              <tr><td>الثلاثاء</td><td>شبكات قوى كهربية، تحكم آلي، إلكترونيات قوى كهربية</td></tr>
+              <tr><td>الأربعاء</td><td>تكنولوجيا وورش شبكات وأجهزة كهربائية، تحكم آلي</td></tr>
+              <tr><td>الخميس</td><td>أنظمة توليد القوى الكهربية، تكنولوجيا وورش شبكات</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- التسجيل والسيرة الذاتية -->
+    <section id="register" class="section">
+      <div class="card">
+        <h3>إنشاء حساب وإرسال السيرة الذاتية (CV)</h3>
+        <p class="hint">التسجيل متاح حصرياً لطلاب الفرقة الثانية شعبة شبكات كهربائية بالمعهد الفني الصناعي بقويسنا، وتُفعّل العضوية بعد مراجعة الأدمن.</p>
+        <form id="cvForm">
+          <div class="grid-2">
+            <div class="form-group">
+              <label>الاسم بالكامل</label>
+              <input type="text" id="studentName" required placeholder="اكتب اسمك الرباعي كما في الكشوف" />
+            </div>
+            <div class="form-group">
+              <label>رقم الهاتف والواتساب</label>
+              <input type="tel" id="studentPhone" required placeholder="01xxxxxxxxx" />
+            </div>
+            <div class="form-group">
+              <label>البريد الإلكتروني (Gmail)</label>
+              <input type="email" id="studentEmail" required placeholder="example@gmail.com" />
+            </div>
+            <div class="form-group">
+              <label>تاريخ الميلاد</label>
+              <input type="date" id="studentBirth" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>المعهد والشعبة</label>
+            <input type="text" value="المعهد الفني الصناعي بقويسنا - الفرقة الثانية شعبة شبكات كهربائية" readonly />
+          </div>
+          <div class="form-group">
+            <label>ملخص السيرة الذاتية والمهارات الفنية (CV)</label>
+            <textarea id="studentBio" rows="4" required placeholder="اكتب نبذة عن خبراتك العملية، الدورات، أو مهاراتك في مجال الكهرباء والشبكات..."></textarea>
+          </div>
+          <button type="submit" class="btn">إرسال السيرة الذاتية للمراجعة</button>
+          <div id="cvStatus" class="status-msg"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- المواد السبع -->
+    <section id="subjects" class="section">
+      <div class="card">
+        <h3>المواد الدراسية (7 مواد) - محاضرات PDF وامتحانات PDF</h3>
+        <div id="subjectsList"></div>
+      </div>
+    </section>
+
+    <!-- قائمة الطلاب -->
+    <section id="students" class="section">
+      <div class="card">
+        <h3>قائمة أسماء طلاب الفرقة الثانية - شبكات كهربائية (286 طالباً)</h3>
+        <div class="form-group">
+          <input type="text" id="studentSearch" placeholder="ابحث باسم الطالب..." />
+        </div>
+        <div id="studentsCount" class="status-msg"></div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>اسم الطالب</th>
+                <th>الفرقة والشعبة</th>
+              </tr>
+            </thead>
+            <tbody id="studentsTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- الدعم الفني -->
+    <section id="support" class="section">
+      <div class="card">
+        <h3>الدعم الفني والشكاوى</h3>
+        <form id="supportForm">
+          <div class="grid-2">
+            <div class="form-group">
+              <label>اسم الطالب / الطالبة</label>
+              <input type="text" id="ticketName" required placeholder="الاسم بالكامل" />
+            </div>
+            <div class="form-group">
+              <label>نوع الاستفسار أو المشكلة</label>
+              <select id="ticketType">
+                <option value="مشكلة تقنية">مشكلة تقنية</option>
+                <option value="استفسار عن المحاضرات أو الامتحانات">استفسار عن المحاضرات أو الامتحانات</option>
+                <option value="ملاحظة على قائمة الأسماء">ملاحظة على قائمة الأسماء</option>
+                <option value="أخرى">أخرى</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>تفاصيل الرسالة</label>
+            <textarea id="ticketMessage" rows="3" required placeholder="اكتب رسالتك بوضوح..."></textarea>
+          </div>
+          <button type="submit" class="btn">إرسال إلى صندوق وارد الأدمن</button>
+          <div id="supportStatus" class="status-msg"></div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>سجل رسائل الدعم الفني والردود</h3>
+        <div id="ticketsFeed"></div>
+      </div>
+    </section>
+
+    <!-- لوحة الأدمن -->
+    <section id="admin" class="section">
+      <div class="card">
+        <h3>لوحة تحكم الأدمن (محمد سامح)</h3>
+        <p class="hint">
+          أدخل كلمة مرور الأدمن لإدارة طلبات السيرة الذاتية (قبول / حظر)، وإضافة روابط ملفات الـ PDF للمواد السبع، والرد على رسائل الدعم الفني.
+        </p>
+        <div class="admin-login-row">
+          <input type="password" id="adminPassInput" placeholder="كلمة مرور الأدمن (الافتراضية: admin123)" />
+          <button type="button" id="adminLoginBtn" class="btn">دخول اللوحة</button>
+        </div>
+        <div id="adminAuthMsg" class="status-msg"></div>
+      </div>
+
+      <div id="adminPanel" style="display: none;">
+        <div class="card">
+          <h3>إضافة ملف PDF لمادة (محاضرات أو امتحانات)</h3>
+          <form id="addMaterialForm">
+            <div class="grid-2">
+              <div class="form-group">
+                <label>اختر المادة</label>
+                <select id="matSubject"></select>
+              </div>
+              <div class="form-group">
+                <label>نوع الملف</label>
+                <select id="matCategory">
+                  <option value="lectures">محاضرات PDF</option>
+                  <option value="exams">امتحانات PDF</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>عنوان الملف</label>
+                <input type="text" id="matTitle" required placeholder="مثال: المحاضرة الأولى - شبكات قوى" />
+              </div>
+              <div class="form-group">
+                <label>رابط الملف (Google Drive أو رابط مباشر)</label>
+                <input type="url" id="matUrl" required placeholder="https://drive.google.com/..." />
+              </div>
+            </div>
+            <button type="submit" class="btn">حفظ الرابط في المنصة</button>
+            <div id="matStatus" class="status-msg"></div>
+          </form>
+        </div>
+
+        <div class="card">
+          <h3>طلبات السيرة الذاتية (CV)</h3>
+          <div id="adminCvList"></div>
+        </div>
+
+        <div class="card">
+          <h3>صندوق وارد الدعم الفني والرد عليها</h3>
+          <div id="adminTicketsList"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    منصة المعهد الفني الصناعي بقويسنا - الفرقة الثانية شعبة شبكات كهربائية | تصميم وإدارة: محمد سامح
+  </footer>
+
+  <!-- Firebase SDK (Compat) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
